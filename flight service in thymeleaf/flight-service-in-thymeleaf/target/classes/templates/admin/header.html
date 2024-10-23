@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"
+xmlns:th="http://www.thymeleaf.org"
+>
+  <head th:fragment="header">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-blue" th:fragment="navbar">
+  <a class="navbar-brand" th:href="@{/}">AllFlights</a>
+   <a class="navbar-brand" th:href="@{/admin/showRegistration/flight}">New Flight</a>
+   <a class="navbar-brand" th:href="@{/admin/allFlights/filter}">Travel</a>
+   <a class="navbar-brand" th:href="@{/register}">SignUp</a>
+   <div>
+   <form class="form-group" th:action="@{/logout}" method="post">
+   	<button type="submit" class="btn btn-primary" value="logout">Logout</button>
+   </form>
+   </div>
+   
+   
+   
+  
+</nav>
+    
+  </body>
+</html>
